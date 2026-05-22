@@ -3,3 +3,4 @@ python-dotenv
 pyodbc
 azure-identity
 azure-functions
+pytest
