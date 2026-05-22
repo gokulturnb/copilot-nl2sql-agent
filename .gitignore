@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Azure Functions local settings
+local.settings.json
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Local packages
+.python_packages/
+
+# Logs
+*.log
+
+# Test/cache folders
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+.cursor/
