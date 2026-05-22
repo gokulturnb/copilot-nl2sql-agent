@@ -1,0 +1,21 @@
+# CODEOWNERS
+# This file defines who should review changes to important project files.
+
+# Default owner for the whole repository
+* @gokulturnb
+
+# Azure Function backend code
+/function_app.py @gokulturnb
+/main.py @gokulturnb
+/requirements.txt @gokulturnb
+/host.json @gokulturnb
+
+# AI context and business-rule files
+/finance_context.md @gokulturnb
+/selected_measures_lookup.md @gokulturnb
+
+# Governance documentation
+/governance/ @gokulturnb
+
+# GitHub automation and repository controls
+/.github/ @gokulturnb
