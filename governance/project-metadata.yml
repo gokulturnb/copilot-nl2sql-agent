@@ -1,0 +1,68 @@
+project:
+  canonical_name: copilot-nl2sql-agent
+  display_name: Copilot NL2SQL Finance Agent
+  description: >
+    AI-powered finance analytics backend where Copilot Studio acts as the
+    conversational front end and Azure Functions acts as the backend API.
+    The backend receives a user question, generates SQL using approved
+    finance context and measure lookup files, executes the query against
+    Microsoft Fabric Warehouse, and returns a summarized answer.
+
+ownership:
+  business_owner: TBD
+  technical_owner: Gokul D Raj
+  data_owner: TBD
+  security_owner: TBD
+  product_owner: TBD
+
+repository:
+  platform: GitHub
+  repository_name: copilot-nl2sql-agent
+  repository_visibility: private
+  default_branch: main
+  development_branch: develop
+  branching_strategy: main/develop/feature
+  pull_request_required: true
+  minimum_approvals_required: 1
+
+application:
+  frontend: Copilot Studio
+  backend: Azure Functions
+  backend_language: Python
+  api_entrypoint: function_app.py
+  pipeline_entrypoint: main.py
+  primary_endpoint: /api/ask
+  data_source: Microsoft Fabric Warehouse
+  llm_provider: OpenAI / Azure OpenAI
+  context_files:
+    - finance_context.md
+    - selected_measures_lookup.md
+
+data_and_compliance:
+  data_classification: confidential
+  contains_financial_data: true
+  contains_customer_or_tenant_data: possible
+  contains_personal_data: possible
+  production_data_allowed_in_repository: false
+  secrets_allowed_in_repository: false
+  compliance_notes: >
+    Repository must not contain production data, API keys, database passwords,
+    Fabric credentials, Azure OpenAI keys, .env files, or local.settings.json.
+
+security:
+  secrets_storage: GitHub Secrets / Azure Key Vault
+  recommended_runtime_identity: Azure Managed Identity
+  database_access_pattern: read-only execution through backend
+  rls_required: future-ready
+  direct_user_database_access: false
+
+github_plan:
+  recommended_plan: GitHub Team
+  reason: >
+    Private repository, branch protection, pull request reviews, GitHub Actions,
+    dependency monitoring, and collaboration controls are required for this project.
+
+status:
+  current_stage: development
+  production_ready: false
+  last_updated: 2026-05-22
