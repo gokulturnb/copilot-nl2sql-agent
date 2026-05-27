@@ -14,7 +14,7 @@ The LLM should use this file to understand:
 * how to apply EWIG/community/company/project filters correctly.
 * how to route **units / leasing / occupancy** vs **GL rental revenue** vs **rent potential** questions.
 
-For a **compact column index** (table → columns), see **[Quick reference: tables and columns](#quick-reference-tables-and-columns)**. Join logic, measure definitions, and anti-patterns stay in the section below.
+For a **compact column index** (table → columns), see **[Quick reference: tables and columns](#quick-reference-tables-and-columns)**. Join logic, measure definitions, and anti-patterns stay in the sections below.
 
 ## Index
 
